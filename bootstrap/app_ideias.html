@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Coletivy App">  
+<meta name="author" content="Coletivy">
+
+ <!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen" type="text/css">
+
+	
+<title>Coletivy Ideias - Construção da Campanha</title>
+
+<style type = "text/css">
+
+  body {
+    background-color: #E7EBF2;
+    margin-top: 30px;
+  }
+
+#spanBoxBranco {
+  margin: 0px auto;
+  float:none;
+  background-color: #fff;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+#botoes{
+  margin: 10px auto;
+  float: none;
+}
+
+@-moz-document url-prefix() {
+    #botoes {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+}
+
+#spanCabecalho{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+#header_footer {
+    background-color: #93CEDE; /* Old browsers */
+background-image: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%); /* FF3.6+ */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(147,206,222,1)), color-stop(41%,rgba(117,189,209,1)), color-stop(100%,rgba(73,165,191,1))); /* Chrome,Safari4+ */
+background-image: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* Chrome10+,Safari5.1+ */
+background-image: -o-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* Opera 11.10+ */
+background-image: -ms-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* IE10+ */
+background-image: linear-gradient(to bottom, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* W3C */
+}
+
+#boxImg {
+    margin: 30px auto;
+    float:none;
+    height: 200px;
+    background-color: #E7EBF2;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+
+}
+
+#formEsquerda {
+    /* margin: 0px 0px 0px 60px; */
+    margin-left: 30px;
+    float:none;
+}
+
+#inputTitulo {
+    width: 295px;
+    margin-bottom: 20px;
+}
+
+#inputTextArea{
+    width: 295px;
+    margin-bottom: 22px;
+
+}
+
+#datetimepicker{
+  margin-bottom: 22px;  
+}
+
+#labelEncerramento{
+  float: left;
+}
+
+#tooltipEncerramento{
+  margin-left: 5px;
+}
+
+#tooltipLikeGate{
+  margin-left: 5px;
+}
+
+#chkBoxLikeGate{
+  float: left;
+  margin-bottom: 22px; 
+}
+
+#botaoContinuar{
+  float: right;
+}
+
+#botaoVoltar{
+  margin-right: 10px;
+  float: right;
+}
+
+#textImgCapa{
+  font-size: 150%;
+  padding-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 184px;
+}
+
+#botaoUploadImg{
+  /*margin-left: 250px;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 134px;
+
+}
+
+#chkBoxSubmissaoArquivo{
+    float: left;
+    margin-bottom: 37px;
+}
+
+#tooltipSubmissaoArquivo{
+margin-left: 5px;
+}
+
+#textoMenu{
+  margin-top: 10px;
+}
+
+#labelColetivyIdeias{
+  /*margin-top: 10px;*/
+}
+
+#navPillVisualizacao{
+  margin-bottom: 5px;  
+}
+
+#form{
+  margin-bottom: 0px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <!-- HEADER -->
+  <div id="header_footer" class="navbar navbar-fixed-top">
+    <div class="navbar-inner" id="header_footer">
+      <div class="container">
+        <a class="brand pull-left" href="#"><img src="logo_header_app.png" alt = "Coletivy Logo"></a>
+        <div class="nav-collapse">
+        <ul class="nav pull-right" id = "textoMenu">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user icon-black"></i> Olá Felipe Mesquita <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Perfil</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+      </div>
+    </div>
+  </div> 
+
+  <div class="row-fluid">  <!-- ROW DO CABECALHO -->
+    <div class="span8" id = "spanCabecalho">
+      <span class="label label-info pull-left" id = "labelColetivyIdeias"> Coletivy Ideias </span>
+<!--       <ul class="nav nav-pills pull-right" id = "navPillVisualizacao">
+        <li class="active">
+          <a href="#">Modo Edição</a>
+        </li>
+        <li>
+          <a id = "tooltipModoRascunho" href="#" rel="popover" data-content="No modo rascunho você visualiza como ficará a sua campanha no Facebook">Modo Rascunho</a>
+        </li>      
+      </ul> -->
+    </div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="row-fluid"> <!-- ROW BOX BRANCO -->
+    <div class="span8" id="spanBoxBranco">
+      <div class="row-fluid"> <!-- BOX IMG CAPA -->
+        <div class="span10" id="boxImg">
+          <p id = "textImgCapa"> 
+            Imagem de Capa
+            <img src="help_icone.png" id="tooltipImg" alt="Dúvidas"  rel="popover" data-content="Procure utilizar uma imagem impactante e que seja uma chamada para a campanha. Recomendamos um tamanho de imagem de 780 x 315" width = "20px" heigth = "20px"/>            
+          </p>
+          <p id = "botaoUploadImg">           
+            <input type="file" title="Escolher Imagem" id = "uploadImg" onchange = "carregarImg()">
+          </p>
+        </div>
+      </div>
+
+      <form id = "form">
+        <div class="row-fluid"> <!-- ROW DOS FORMULARIOS -->
+          <div class="span5 offset1"> <!-- FORMULARIO DA ESQUERDA -->
+              <!-- TITULO DA CAMPANHA -->
+              <input type="text" placeholder="Título da Campanha" id = "inputTitulo">
+
+              <!-- DESCRICAO DA CAMPANHA -->
+              <textarea id = "inputTextArea" rows = "18" placeholder="Descrição da Campanha                                Dê o máximo de informações a respeito do tipo de submissão que você espera do coletivo. O coletivo adora saber que sua voz está sendo ouvida, portanto, se possível, diga como você irá utilizar as submissões"></textarea>
+
+          </div>
+
+          
+          <div class="span5"> <!-- FORMULARIO DA DIREITA -->
+              <!-- PREMIACAO DA CAMPANHA -->
+              <textarea id = "inputTextArea" rows = "12" placeholder="Premiação (campo opcional)
+                    Escreva aqui qual é a premiação para o vencedor. Dinheiro, produtos, viagens, ou apenas um obrigado. O importante é dizer ao coletivo o que está em jogo."></textarea>
+
+              <!-- ENCERRAMENTO DA CAMPANHA -->
+              <label for = "inputData" id = "labelEncerramento"> Data de Encerramento (campo opcional) <img src="help_icone.png" id="tooltipEncerramento" alt="Dúvidas Encerramento"  rel="popover" data-content="Seu Coletivy pode ter data de encerramento ou não. Se você optar por uma data de encerramento, ao atingir esta data, nenhum usuário poderá postar em seu Coletivy. Recomendamos Coletivys com data de encerramento quando você deseja uma campanha com inicio meio e fim. Se você quiser um feedback contínuo recomendamos um Coletivy sem data de encerramento." width = "20px" heigth = "20px"/> </label>           
+              <div id="datetimepicker" class="input-append">
+                <input data-format="dd/MM/yyyy" type="text" style = "width: 268px;" id = "inputData"></input>
+                <span class="add-on">
+                <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                </span>
+              </div>
+
+              <!-- CHECKBOX LIKE GATE -->
+              <label  id = "chkBoxLikeGate"> 
+                <input type="checkbox"> 
+                <img src="like_icone.png" alt="Habilitar Like Gate" hspace = "5px"/> 
+                Habilitar Like Gate 
+                <img src="help_icone.png" id="tooltipLikeGate"  alt="Dúvidas" rel="popover" data-content="Habilite o Like Gate caso você queira que os usuários sejam obrigados a dar um Like em sua fanpage para participar de seu Coletivy" width = "20px" heigth = "20px"/> 
+              </label>
+
+
+              <!-- CHECKBOX OBRIGAR SUBMISSÃO DE ARQUIVO -->
+              <label  id = "chkBoxSubmissaoArquivo"> 
+                <input type="checkbox"> 
+                <img src="submissao_arquivo.png" alt="Obrigar Submissao de Arquivo" width = "30px"/> 
+                Obrigar submissão de arquivo
+                <img src="help_icone.png" id="tooltipSubmissaoArquivo"  alt="Dúvidas" rel="popover" data-content="Habilite esta opção caso você queira que os usuários sejam obrigados a submeter um arquivo ao postar uma ideia" width = "20px" heigth = "20px"/> </label>         
+          </div>       
+        </div>
+      </div>
+    </div> <!-- ROW BOX BRANCO -->
+
+        
+    <div class="row-fluid">  <!-- ROW DOS BOTOES -->
+      <div class="span8" id = "botoes"> 
+        <input type="submit" class="btn btn-primary" id = "botaoContinuar" value="Continuar"/>
+        <a href="escolha_app.html" class="btn btn-info" id = "botaoVoltar">Voltar</a>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+
+
+<!-- Le javascript  
+================================================== -->  
+<!-- Placed at the end of the document so the pages load faster -->  
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>  
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>  
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"></script>
+<script type="text/javascript" src="js/bootstrap.file-input.js"></script>
+<!-- <script type="text/javascript" src="js/bootstrap-button.js"></script>  
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>  
+<script type="text/javascript" src="js/bootstrap-carousel.js"></script>  
+<script type="text/javascript" src="js/bootstrap-typeahead.js"></script>
+<script type="text/javascript" src="js/bootstrap-transition.js"></script>  
+<script type="text/javascript" src="js/bootstrap-alert.js"></script>  
+<script type="text/javascript" src="js/bootstrap-modal.js"></script>  
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>  
+<script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>  
+<script type="text/javascript" src="js/bootstrap-tab.js"></script>   -->
+
+<script type="text/javascript">
+  
+$('#datetimepicker').datetimepicker({
+    format: 'dd/MM/yyyy',
+    language: 'pt-BR',
+    pickTime: false
+});
+
+$(function () { 
+  $("#tooltipImg").popover();  
+}); 
+
+$(function () { 
+  $("#tooltipEncerramento").popover();  
+}); 
+
+$(function () { 
+  $("#tooltipLikeGate").popover();  
+});
+
+$(function () { 
+  $("#tooltipSubmissaoArquivo").popover();  
+});
+
+$(function () { 
+  $("#tooltipModoRascunho").popover();  
+}); 
+
+function carregarImg(){
+
+  var path = document.getElementById("uploadImg").value.replace("C:\\fakepath\\", "");
+  var boxImg = document.getElementById("boxImg");                            
+
+  boxImg.innerHTML = "";
+  boxImg.style.backgroundImage = "url(\'"+path+"\')";
+
+  boxImg.innerHTML = "<p id = \"botaoUploadImg\"> <a class=\"file-input-wrapper btn undefined\">Trocar Imagem<input type=\"file\" title=\"Trocar Imagem\" id=\"uploadImg\" onchange=\"carregarImg()\"></a></p>";
+  
+
+  // CORRIGINDO POSICAO DO BOTAO TROCAR IMAGEM PARA O CANTO INFERIOR DIREITO
+  var botaoUploadImg = document.getElementById("botaoUploadImg");
+  botaoUploadImg.style.cssFloat = "right";
+  botaoUploadImg.style.width = "121px";
+  botaoUploadImg.style.marginRight = "5px";
+  botaoUploadImg.style.marginTop = "165px";
+
+}
+
+</script>
+
+
+</body>
+</html>

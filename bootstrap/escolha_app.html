@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Coletivy App">  
+<meta name="author" content="Coletivy">
+
+ <!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen" type="text/css">
+	
+<title>Coletivy Photos - Construção da Campanha</title>
+
+<style type = "text/css">
+
+  body {
+    background-color: #E7EBF2;
+    margin-top: 30px;
+  }
+
+#rowBoxBranco{
+  height: 821px;
+}
+
+#boxBranco {
+  margin: 100px auto;
+  float:none;
+  background-color: #fff;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  min-height: 720px;
+  padding-left: 40px;
+}
+
+#rowBotoes{
+  margin-bottom: 100px;
+  height: 1px;
+}
+
+#botoes{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+
+
+#header_footer {
+  background-color: #93CEDE; /* Old browsers */
+  background-image: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(147,206,222,1)), color-stop(41%,rgba(117,189,209,1)), color-stop(100%,rgba(73,165,191,1))); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom, rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%); /* W3C */
+}
+
+#botaoContinuar{
+  float: right;
+}
+
+#botaoSair{
+  margin-right: 10px;
+  float: right;
+}
+
+#textoMenu{
+  margin-top: 10px;
+}
+
+#textoModeloCampanha{
+  font-size: 150%;
+  margin-top: 50px;
+}
+
+#labelRadio{
+  float: left;
+}
+
+#inputRadio{
+  margin-top: 55px;
+}
+
+#rowAppPhotos{
+  margin-top: 80px;
+}
+
+#tituloAppPhotos{
+  font-size: 120%;
+  margin-left: 170px;
+}
+
+#textoApp{
+  margin-top: 15px;
+  width: 510px;
+  margin-left: 170px;
+}
+
+#rowAppIdeias{
+  margin-top: 130px;
+}
+
+#tituloAppIdeias{
+  font-size: 120%;
+  margin-left: 170px;
+  margin-top: -11px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <!-- HEADER -->
+  <div id="header_footer" class="navbar navbar-fixed-top">
+    <div class="navbar-inner" id="header_footer">
+      <div class="container">
+        <a class="brand pull-left" href="#"><img src="logo_header_app.png" alt = "Coletivy Logo"></a>
+        <div class="nav-collapse">
+        <ul class="nav pull-right" id = "textoMenu">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user icon-black"></i> Olá Felipe Mesquita <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Perfil</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row-fluid" id = "rowBoxBranco"> <!-- ROW BOX BRANCO -->
+    <div class="span8" id="boxBranco">
+
+      <div class="row-fluid"> <!-- ROW TEXTO "ESCOLHA SUA CAMPANHA" -->
+        <div class="span10">
+          <p id = "textoModeloCampanha"> Escolha o seu modelo de campanha</p>
+
+        </div>
+      </div>
+
+      <div class="row-fluid"> <!-- ROW APP PHOTOS -->
+        <div class="span12" id = "rowAppPhotos">        
+            <label  class = "radio" id = "labelRadio"> <input type="radio" name = "radioCampanha" value="app_photos.html" id = "inputRadio" checked = "checked" onclick = "direcionaPagina()"> <img src="app_photos.png" alt="App Photos" hspace = "5px" width = "120px"/></label>
+            <p id = "tituloAppPhotos"> <strong> Coletivy Photos </strong> </p>
+            <p id = "textoApp"> Coletivy Photos é o app ideal para promover um concurso de fotos via facebook visando a promoção de sua marca. <br>
+              Faça um open call, receba fotos do coletivo, interaja com eles e deixe que o coletivo escolha a melhor foto.</p>
+        </div>     
+      </div>
+
+      <div class="row-fluid"> <!-- ROW APP IDEIAS -->
+        <div class="span12" id = "rowAppIdeias">
+          <label  class = "radio" id = "labelRadio"> <input type="radio" name = "radioCampanha" value="app_ideias.html" id = "inputRadio" onclick = "direcionaPagina()"> <img src="app_ideias.png" alt="App Ideias" hspace = "5px" width = "120px"/></label>
+          <p id = "tituloAppIdeias"> <strong> Coletivy Ideias </strong> </p>
+          <p id = "textoApp"> Coletivy Ideias é o app ideal para criar um ambiente de troca de ideias.
+          Seja com os clientes de sua empresa ou ainda com um grupo de pessoas que estão focadas em uma causa comum, o Coletivy Ideias irá gerar um grande número de ideias passíveis de se tornarem realidade. 
+          <br>
+          Faça um open call, receba ideias do coletivo, interaja com eles e desfrute do caminhão de novas ideias que você irá receber.</p>
+        </div>     
+      </div>      
+
+    </div>
+  </div> <!-- ROW BOX BRANCO -->
+
+      
+  <div class="row-fluid" id = "rowBotoes">  <!-- ROW DOS BOTOES -->
+    <div class="span8" id = "botoes"> 
+      <a href="app_photos.html" class="btn btn-primary" id = "botaoContinuar">Continuar</a>
+      <a href="http://www.coletivy.com.br" class="btn btn-danger" id = "botaoSair">Sair</a>
+    </div>
+  </div>
+
+</div> <!-- CONTAINER -->
+
+
+<!-- Le javascript  
+================================================== -->  
+<!-- Placed at the end of the document so the pages load faster -->  
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type = "text/javascript">
+
+  function direcionaPagina(){
+    var campanha = document.getElementsByName("radioCampanha");
+    
+    for (i = 0; i < campanha.length; i++){
+      campanhaAtual = campanha[i];
+      if (campanhaAtual.checked){
+        var campanhaSelecionada = campanhaAtual.value;
+        break;
+      } // end if
+    } // end for
+
+    var divBotoes = document.getElementById("botoes");
+    divBotoes.innerHTML = "";
+
+    var codigoHtml = "<a href = \"" + campanhaSelecionada + "\" class=\"btn btn-primary\" id = \"botaoContinuar\">Continuar</a> \n";
+    codigoHtml += "<a href=\"http://www.coletivy.com.br\" class=\"btn btn-danger\" id = \"botaoSair\">Sair</a> \n";
+    divBotoes.innerHTML = codigoHtml;
+
+} // end function
+
+</script>
+
+
+
+</body>
+</html>
